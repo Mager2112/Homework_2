@@ -1,4 +1,8 @@
-﻿#include <iostream>
+﻿/*
+   Copyright Mager 2023
+   All rights reserved lmao
+*/
+#include <iostream>
 #include <string>
 #include <fstream>
 #include <vector>
@@ -32,10 +36,11 @@ void Sub_Array(int arr[], int n, int m)
 
 int main()
 {
-	int n, m;
+	//1)
+	/*int n, m;
 	std::cin >> n >> m;
 	int* dinamich_array = new int[n];
 	for (int i = 0; i < n; i++)
 		std::cin >> dinamich_array[i];
-	Sub_Array(dinamich_array, n, m);
+	Sub_Array(dinamich_array, n, m);*/
 }

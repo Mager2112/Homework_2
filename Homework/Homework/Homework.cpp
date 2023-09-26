@@ -2,6 +2,7 @@
    Copyright Mager 2023
    All rights reserved lmao
 */
+// ------------------ THATHS ONLY PROTOTYPES ------------------
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -33,7 +34,32 @@ void Sub_Array(int arr[], int n, int m)
 		}
 	}
 }
+void Staples(std::string s)
+{// ))(())(( answer:4 (())
+	int count = 0;
+	int max = 0;
+	for (int i = 0; i < s.length(); i++)
+	{
+		
+		if (s[i] == '(')
+		{
+			count++;
+			if (count > max)
+				max = count;
+		}
+		else if (s[i] == ')')
+		{
+			count--;
+			if (count < 0)
+				break;
+		}
+	}
+	if (count != 0)
+		std::cout << "Not correct\n";
+	else
+		std::cout << "OK: " << max << std::endl;
 
+}
 int main()
 {
 	//1)

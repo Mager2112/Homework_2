@@ -68,5 +68,10 @@ int main()
 	int* dinamich_array = new int[n];
 	for (int i = 0; i < n; i++)
 		std::cin >> dinamich_array[i];
-	Sub_Array(dinamich_array, n, m);*/
+	Sub_Array(dinamich_array, n, m);
+	//2)
+	std::string s;
+	std::cin >> s;
+	Staples(s);
+	*/
 }

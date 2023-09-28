@@ -7,7 +7,6 @@
 #include <fstream>
 #include <vector>
 #include <list>
-//HomeWork2
 ///////1) Sub Array sum
 void Sub_Array(int arr[], int n, int m)
 {
@@ -33,6 +32,7 @@ void Sub_Array(int arr[], int n, int m)
 		}
 	}
 }
+///////2) Sub Array sum
 void Staples(std::string s)
 {// ))(())(( answer:4 (())
 	int count = 0;

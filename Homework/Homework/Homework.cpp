@@ -2,7 +2,6 @@
    Copyright Mager 2023
    All rights reserved lmao
 */
-// ------------------ THATHS ONLY PROTOTYPES ------------------
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -60,6 +59,14 @@ void Staples(std::string s)
 		std::cout << "OK: " << max << std::endl;
 
 }
+///////3) Reverse List
+std::list<int> Mirror_List(std::list<int>& nums, int first)
+{
+	nums.reverse();
+	nums.pop_back();
+	nums.push_front(first);
+	return nums;
+}
 int main()
 {
 	//1)
@@ -73,5 +80,12 @@ int main()
 	std::string s;
 	std::cin >> s;
 	Staples(s);
+        //3)
+	std::list<int> nums{ 5, 6, 7, 1, 12, 9, 5, 3, 2 };
+	int first{ nums.front() };
+	Mirror_List(nums, first);
+	std::cout << "result:\n";
+	for (int n : nums)
+		std::cout << n << "\t";
 	*/
 }

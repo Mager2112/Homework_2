@@ -4,7 +4,7 @@
 */
 #include <iostream>
 #include <string>
-#include <stack>
+#include <algorithm>
 #include <list>
 ///////1) Sub Array sum
 void Sub_Array(int arr[], int n, int m)
@@ -34,28 +34,30 @@ void Sub_Array(int arr[], int n, int m)
 ///////2) Sub Array sum
 void Staples(std::string s)
 {// ))(())(( answer:4 (())
-	int count = 0;
-	int max = 0;
+	int countC = 0; // count (
+	int countD = 0; // count )
+	int noC = 0;
+	int noD = 1;
 	for (int i = 0; i < s.length(); i++)
 	{
-		
-		if (s[i] == '(')
+		std::cout << "s[i]=" << s[i] << std::endl;
+		if (s[i] == '(' && noD == 1)
 		{
-			count++;
-			if (count > max)
-				max = count;
+			noC = 1;
+			countC++;
+			std::cout << "  count( " << countC << std::endl;
 		}
-		else if (s[i] == ')')
+		if (s[i + 1] == ')' && noC == 1)
 		{
-			count--;
-			if (count < 0)
-				break;
+			countD++;
+			noD = 0;
+			std::cout << "  count) " << countD << std::endl;
 		}
 	}
-	if (count != 0)
-		std::cout << "Not correct\n";
+	if(countC == countD)
+		std::cout << "Max Depth = " << countC + countD << std::endl;
 	else
-		std::cout << "OK: " << max << std::endl;
+		std::cout << "Max Depth = " << std::min(countC, countD)*2 << std::endl;
 
 }
 ///////3) Reverse List

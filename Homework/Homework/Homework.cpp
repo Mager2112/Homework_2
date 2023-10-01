@@ -4,8 +4,7 @@
 */
 #include <iostream>
 #include <string>
-#include <fstream>
-#include <vector>
+#include <stack>
 #include <list>
 ///////1) Sub Array sum
 void Sub_Array(int arr[], int n, int m)

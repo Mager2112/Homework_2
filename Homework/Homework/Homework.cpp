@@ -45,13 +45,11 @@ void Staples(std::string s)
 		{
 			noC = 1;
 			countC++;
-			std::cout << "  count( " << countC << std::endl;
 		}
 		if (s[i + 1] == ')' && noC == 1)
 		{
 			countD++;
 			noD = 0;
-			std::cout << "  count) " << countD << std::endl;
 		}
 	}
 	if(countC == countD)
